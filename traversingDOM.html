@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent and Child and Travering the DOM</title>
+</head>
+<body>
+    <div class="container">
+        <ul>
+            <li>One</li>
+            <li>Two
+                <ol>
+                    <li>Sub one</li>
+                    <li>Sub two</li>
+                    <li>Sub three</li>
+                </ol>
+            </li>
+            <li>Three</li>
+            <li>Four</li>
+            <li>Five</li>
+        </ul>
+    </div>
+</body>
+<script>
+    var cont =  document.querySelector('.container');
+    console.log(cont);
+    console.log(cont.childNodes);
+    console.log(cont.children);
+    console.log(cont.children[0].children);
+    console.log(cont.children[0].children[1].children.length);
+    console.log(cont.children[0].children[1].children[0].children[0].textContent);
+</script>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating, removing and replacing elements</title>
+</head>
+<body>
+    <div class="container">
+        <ul id="ul">
+            <li id="oneLI">One</li>
+            <li>Two
+                <ol>
+                    <li>Sub one</li>
+                    <li>Sub two</li>
+                    <li>Sub three</li>
+                </ol>
+            </li>
+            <li id="threeLI">Three</li>
+            <li id="fourLI">Four</li>
+            <li id="fiveLI">Five</li>
+        </ul>
+    </div>
+</body>
+<script>
+
+    //create
+    var element = document.createElement('li');
+    var text = document.createTextNode("I am a text node");
+    element.appendChild(text);
+
+    element.className="custome";
+    element.id="custome";
+    element.setAttribute("title","myTitle");
+
+    let ul = document.getElementById('ul');
+    ul.appendChild(element);
+
+    //Replacing 
+    var another = document.createElement('h1');
+    another.innerText="Was recently replaced";
+
+    var yet = document.createElement('h6')
+    yet.innerText="I was yet again replaced";
+
+    let three = document.getElementById('threeLI');
+    three.appendChild(another);
+
+    let four = document.getElementById('fourLI');
+    four.appendChild(another);
+
+    another.replaceWith(yet);
+
+    //Removing 
+
+    four.remove();
+    ul.removeChild(document.getElementById('oneLI'))
+</script>

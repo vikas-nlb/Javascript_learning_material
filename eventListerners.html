@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events and Listners</title>
+</head>
+<style>
+    .btn {
+        padding: 10px 40px;
+        background-color: rosybrown;
+        color: black;
+        border-radius: 20px;
+        cursor: pointer;
+        box-shadow: 2px 2px 2px 1px black;
+    }
+    .btn::selection{
+        box-shadow: none;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h2>Hello Viewer</h2>
+        <p id="para">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam vel animi ipsa quae dolor. Iste aliquam,
+            explicabo pariatur commodi incidunt minima quos, neque dolorem omnis officia nam rem? Cumque rerum saepe
+            ipsum reiciendis, hic assumenda perspiciatis! Numquam nisi incidunt deserunt laudantium esse? Repellendus, a
+            saepe. Doloremque mollitia pariatur tempora voluptates quos, modi voluptate, beatae blanditiis nulla quidem
+            dolorem aliquid quasi, consequatur architecto excepturi sed est. Repudiandae illo dolor commodi, possimus
+            neque non ipsum reiciendis numquam velit delectus enim nam officia odio in inventore consectetur quis
+            repellendus impedit nostrum. Mollitia magnam aliquid eum ipsum nisi accusantium reprehenderit dolorem
+            tenetur corrupti molestias. Iure dolore vitae, reprehenderit at porro sint vel ad blanditiis officiis ex
+            rerum. Dicta doloremque ipsam explicabo minima, laudantium vero necessitatibus suscipit qui eveniet! Natus
+            nemo voluptates repudiandae, dolore non ducimus excepturi eos incidunt ex id, omnis optio asperiores fuga
+            quam, commodi in. Sequi, animi. Voluptates ex sunt, provident iure cupiditate tempora obcaecati commodi ut
+            expedita sit rem facere veritatis. Hic, velit quod iure excepturi sed praesentium? Ducimus accusamus, velit,
+            fugit, sit ut est iusto nulla laborum quibusdam optio rem quo numquam repellendus nostrum omnis pariatur
+            fuga itaque laboriosam. Voluptates, sed qui! Possimus molestiae temporibus exercitationem sapiente delectus
+            id dolores nisi nesciunt adipisci. Aliquam ducimus recusandae repellendus voluptates explicabo similique
+            mollitia et itaque nihil quia aliquid quisquam at soluta nobis, ab reprehenderit, saepe totam quibusdam
+            omnis dolorem dolores sapiente consectetur. Laudantium at rerum qui, accusamus iure repellendus quae
+            architecto nemo distinctio assumenda ab ea corrupti, ratione neque, accusantium ullam. Quidem.
+        </p>
+        <button class="btn" id="btnId" onclick="toggleHide()">Hide</button>
+    </div>
+</body>
+<script>
+    let para = document.getElementById('para');
+    let btnId = document.getElementById('btnId'); // u can ommit this as modern browsers take it by default unless u over ride it with something
+
+    function toggleHide(){
+        if(para.style.display!='none'){
+        para.style.display='none';
+        btnId.innerHTML='Show';
+        }else{
+            para.style.display='block'
+            btnId.innerHTML='Hide';
+        }
+    }
+    para.addEventListener('mouseover',function runInside(){
+        console.log('Mouse inside');
+    })
+    para.addEventListener('mouseout',function runOut(){
+        console.log('Mouse out');
+    })
+</script>
+
+</html>

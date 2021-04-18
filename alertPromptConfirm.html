@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert , Prompt and Confirm</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function useAlert(){
+        alert("Using alert");
+        usePrompt();
+    }
+    function usePrompt(){
+        var answer = prompt("Is this your first time using prompt","Yes");
+        console.log(answer);
+        useConfirm();
+    }
+
+    function useConfirm(){
+        var status = confirm("Are you sure you want to delete this?");
+        if(status){
+            console.log("Bye");
+        }
+        else{
+            console.log("We will have a great time coding together");
+        }
+    }
+    useAlert();
+</script>
+</html>

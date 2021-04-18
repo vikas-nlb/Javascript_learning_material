@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+</head>
+<style>
+    body{
+        display:flex;
+        justify-content: center;
+    }
+    .container{
+        width:250px;
+        height: 250px;
+        border-radius: 125px;
+        background-color:rosybrown;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+    .time{
+        width:230px;
+        height:230px;
+        border-radius: 115px;
+        background-color:rgb(233, 178, 178);
+        color:white;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="time" id="time">
+            <h1 id="hourMinute"></h1>
+            <h1 id="onlySeconds"></h1>
+        </div>
+    </div>
+</body>
+<script>
+    let hourMinute = document.getElementById('hourMinute');
+    let onlySeconds = document.getElementById('onlySeconds');
+
+    setInterval(updateTime,1000);
+    function addZero(i){
+        if(i<10){
+            i="0"+i;
+        }
+        return i;
+    }
+
+    function updateTime(){
+        var d =new Date();
+        var h = addZero(d.getHours());
+        var m = addZero(d.getMinutes());
+        var s = addZero(d.getSeconds());
+
+        hourMinute.innerHTML=h+" : "+m;
+        onlySeconds.innerHTML=" : "+s;
+    }
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning JSON</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    var obj ={
+        name:"Vikas",
+        friends:["Varun","Sagar","Vikas"],
+        place:["Bangalore","Germany"]
+    }
+    console.log(obj);
+
+    var JsonObj =  JSON.stringify(obj);
+    console.log(JsonObj);
+
+    JsonObj = JsonObj.replace("Vikas","Vikas Kishen Bhargava");
+    console.log(JsonObj);
+
+    var obj2 = JSON.parse(JsonObj);
+    console.log(obj2);
+</script>
+</html>

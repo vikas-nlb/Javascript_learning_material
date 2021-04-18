@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigating the DOM</title>
+</head>
+<body>
+    <div class="container">
+    <ul id="navBar">
+        <li>Vikas</li>
+        <li>Sagar</li>
+        <li>Varun</li>
+        <li>Praveen</li>
+        <li>Nikhil</li>
+    </ul>
+</div>
+<div class="container">
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Salary</th>
+            <th>City</th>
+        </thead>
+        <tbody id="table">
+            <td>Vikas</td>
+            <td>42000</td>
+            <td>Bangalore</td>
+        </tbody>
+    </table>
+</div>
+</body>
+<script>
+    var friends =[{
+        name:'Vikas',
+        salary:1000,
+        city:'Bangalore'
+    },
+    {
+        name:'Sagar',
+        salary:2000,
+        city:'Bangalore'
+    },
+    {
+        name:'Varun',
+        salary:3000,
+        city:'Bangalore/Germany'
+    },
+    {
+        name:'Praveen',
+        salary:4000,
+        city:'Germany'
+    },
+    {
+        name:'Nikhil M K',
+        salary:5000,
+        city:'Australia'
+    }]
+    let table = document.getElementById('table');
+    console.log(table);
+
+    let container = document.getElementsByClassName("container");
+    console.log(container[0]);
+
+    let navBar = document.querySelectorAll('#navBar>li');
+    console.log(navBar);
+    navBar[4].innerHTML='Mk';
+    function getCity(city){
+        return city;
+    }
+
+
+</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions and Methods</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function name(name){
+        console.log(name);
+    }
+    let array = {
+        fname: 'Vikas',
+        mname:'Kishen',
+        lname:'Bhargava',
+        age:'25',
+        getFullName: function(){
+            return this.fname+" "+this.mname+" "+this.lname;
+        }
+    }
+    console.log(array.getFullName());
+    console.log(array.fname);
+    console.log(array.age);
+</script>
+</html>

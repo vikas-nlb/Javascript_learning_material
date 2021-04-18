@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set interval and Set time out</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id="heading"></h1>
+        <table>
+            <thead>
+                <th>Name</th>
+                <th>Salary</th>
+                <th>City</th>
+            </thead>
+            <tbody id="table">
+            </tbody>
+        </table>
+    </div>
+</body>
+<script>
+    var friends =[{
+        name:'Vikas',
+        salary:1000,
+        city:'Bangalore'
+    },
+    {
+        name:'Sagar',
+        salary:2000,
+        city:'Bangalore'
+    },
+    {
+        name:'Varun',
+        salary:3000,
+        city:'Bangalore/Germany'
+    },
+    {
+        name:'Praveen',
+        salary:4000,
+        city:'Germany'
+    },
+    {
+        name:'Nikhil M K',
+        salary:5000,
+        city:'Australia'
+    }]
+
+    let table = document.getElementById('table');
+    let heading = document.getElementById('heading');
+    var i =1;
+    let timeOut=setTimeout(makeHeading,2000,"Welcome to Timeout and Interval");
+    clearTimeout(timeOut); // cancels the time out : clearInterval is for cancelling interval
+    setInterval(makeTable,1000,i);
+   
+    function makeHeading(head){
+        heading.innerHTML = head;
+    }
+    function makeTable(){
+    let dataHTML='';
+    console.log('Entered: '+i);
+    i++;
+    for(let friend of friends){
+        dataHTML+= tableDefination(friend)
+    }
+    table.innerHTML=dataHTML;
+}
+function tableDefination(friend){
+ return `<tr>
+            <td>${friend.name}</td>
+            <td>${friend.salary}</td>
+            <td>${friend.city}</td>
+            </tr>`
+}
+</script>
+</html>
