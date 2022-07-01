@@ -1,15 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-</head>
-<body>
-    
-</body>
-<script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Types</title>
+  </head>
+  <body></body>
+  <script>
 
-</script>
+    /* String */
+    let name = "Nium"
+    console.log(name + ":" +typeof(name))
+
+    /* Number */
+    let age = 5;
+    console.log(age + ":" +typeof(age))
+
+    /* object */
+    let fullName = { first: "Nium", last: "Instarem" };
+    console.log(...fullName + ":" +typeof(fullName))
+
+    /* Boolean */
+    let truth = false;
+    console.log(truth + ":" +typeof(truth))
+
+    /* Array */
+    let language = ["HTML", "CSS", "JS"]
+    console.log(...language + ":" +typeof(language))
+    // Here typeof will return 'object' ,  as javascript recognises array as a type of object
+
+    /* Undefined */
+    let x;
+    console.log("X is :" + typeof(x))
+
+    /* Null */
+    let val = null;
+    console.log(val + ":" +typeof(val))
+    // Here typoOf will return 'object' , this is a javascript bug.
+
+  </script>
 </html>
