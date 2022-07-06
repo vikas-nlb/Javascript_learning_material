@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-</head>
-<body>
-    
-</body>
-<script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filter</title>
+  </head>
+  <body></body>
+  <script>
+    // The filter() method creates a new array filled with elements that pass a test provided by a function.
 
-</script>
+    // The filter() method does not execute the function for empty elements.
+
+    // The filter() method does not change the original array.
+
+    let a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+
+    const b = a.filter((a) => a > 2);
+
+    console.log("a>2 :" + b);
+
+    const c = a.filter((a) => a > 3 && a < 7);
+    console.log("a>3 and a < 7 :" + c);
+
+    const d = a.filter((a) => a % 2 === 0);
+    console.log("Even numbers" + d);
+  </script>
 </html>
