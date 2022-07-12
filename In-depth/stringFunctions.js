@@ -1,0 +1,10 @@
+console.log('hi');
+var a = 'Vikas Kishen Bhargava';
+var b = '  Skanda Pranav Bhargava  ';
+console.log("Slice: " + a.slice(2, 10));
+console.log("SubString: " + a.substring(10, 2));
+console.log("Replace: " + a.replace('Vikas', 'Skanda'));
+console.log("UpperCase: " + a.toUpperCase());
+console.log("LowerCase: " + b.toLowerCase());
+console.log("Concat: " + a.concat(b));
+console.log("Before trim:" + b + "\n After Trim: " + b.trim());
