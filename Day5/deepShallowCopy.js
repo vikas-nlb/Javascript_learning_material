@@ -5,6 +5,8 @@ b.name = 'Nium'
 console.log("Normal copy - \n Value of first variable : "+a.name+"\n Value of second variable : "+b.name) // Output : Nium as this is normal copy
 //Since both are pointing to the same memory , change in one results in change in both or how many ever copies were made
 
+
+
 //Shallow copy
 //Problems with normal copy can be solved using shallow copy
 //A shallow copy of an object is a copy whose properties share the same references (point to the same underlying values) as those of the source object from which the copy was made. As a result, when you change either the source or the copy, you may also cause the other object to change too — and so, you may end up unintentionally causing changes to the source or copy that you don't expect
@@ -33,6 +35,8 @@ const h = {...g} // Object.assign({},g)
 h.skills.primary = 'Android'
 console.log("Shallow copy - Nesting problem - \n Value of first variable : "+g.skills.primary+"\n Value of second variable : "+h.skills.primary)
 // Shallow copy works best when there is no nesting , when nesting comes into picture a change in the copied variable will also change the value in the original variable
+
+
 
 
 //Deep Copy

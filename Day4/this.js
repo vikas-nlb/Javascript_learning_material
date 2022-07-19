@@ -8,15 +8,43 @@
 // In a function, in strict mode, this is undefined.
 // In an event, this refers to the element that received the event.
 // Methods like call(), apply(), and bind() can refer this to any object.
+//Methods -> obj
+//Function -> window or global in node
 
-    const object = {
-        name: 'Nium',
-        printName() {
-            console.log('Not using this keyword :' + name) // I get an error when trying to console name
-        }
+//Method inside an object calling 'this' 
+const object = {
+    name: 'Nium',
+    printName() {
+        console.log('Not using this keyword :' + this.name) // Since 'this' is used inside a method the value of 'this' is the object
     }
-    object.printName()
+}
+//object.printName()
 
-object.printName()
+// Function calling 'this'
+ function test(){
+    console.log(this) // 'this' will reference global object as its inside a function
+ }
 
+ test()
+
+ //Sending this context to forEach and map function
+
+const obj = {
+    name: 'Nium',
+    tags:['Fintech','Startup'],
+    printName() {
+        console.log('Not using this keyword :' + this.name) // Since 'this' is used inside a method the value of 'this' is the object
+    },
+    printTagsMap(){
+        this.tags.map(function(tag){
+            console.log(this.name,tag)
+        },this) // we are supplying the context in the form of 'this' and this provided the context as the object as this is still outside the function execution
+    },
+    printTagsForEach(){
+        this.tags.forEach(function(tag){
+            console.log(this.name,tag)
+        },this)
+    }
+}
+obj.printTags()
 
