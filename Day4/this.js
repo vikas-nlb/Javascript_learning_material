@@ -9,15 +9,14 @@
 // In an event, this refers to the element that received the event.
 // Methods like call(), apply(), and bind() can refer this to any object.
 
-const test = (name) => {
     const object = {
         name: 'Nium',
         printName() {
-            console.log('Using this keyword :' + this.name)
-            console.log('Not using this keyword :' + name)
+            console.log('Not using this keyword :' + name) // I get an error when trying to console name
         }
     }
     object.printName()
-}
 
-test('JavaScript')
+object.printName()
+
+
