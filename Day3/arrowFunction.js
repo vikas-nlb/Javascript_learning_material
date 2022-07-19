@@ -3,21 +3,24 @@
 // Normal Function in JavaScript
 function normalWelcome() {
   console.log("Normal function");
+  return 10
 }
-
+console.log(normalWelcome())
 // Arrow Function
-const arrowWelcome = () => {
+const arrowWelcome = (a,b) => {
+  let sum = a + b
+  return sum
   console.log("Normal function");
 };
 
 //Implicit return
-hello = () => "Hello World!";
-console.log(hello());
+hello = (a,b) => sum = a+b
+console.log(hello(10,20));
 
 //If you have parameters, you pass them inside the parentheses
 helloVal = (val) => "Hello " + val;
 console.log(helloVal("JavaScript"));
 
 //f you have only one parameter, you can skip the parentheses as well
-helloNum = (number) => "Hello " + number;
+helloNum = number => "Hello " + number;
 console.log(helloNum(10));

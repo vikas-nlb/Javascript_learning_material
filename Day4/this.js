@@ -19,5 +19,5 @@ const test = (name) => {
     }
     object.printName()
 }
-console.log('Hui')
+
 test('JavaScript')
