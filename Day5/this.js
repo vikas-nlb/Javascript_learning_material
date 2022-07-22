@@ -18,7 +18,7 @@ const object = {
         console.log('Not using this keyword :' + this.name) // Since 'this' is used inside a method the value of 'this' is the object
     }
 }
-//object.printName()
+object.printName()
 
 // Function calling 'this'
  function test(){

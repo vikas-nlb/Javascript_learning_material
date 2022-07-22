@@ -10,8 +10,8 @@ console.log(normalWelcome())
 const arrowWelcome = (a,b) => {
   let sum = a + b
   return sum
-  console.log("Normal function");
 };
+arrowWelcome(10,20)
 
 //Implicit return
 hello = (a,b) => sum = a+b
@@ -21,6 +21,6 @@ console.log(hello(10,20));
 helloVal = (val) => "Hello " + val;
 console.log(helloVal("JavaScript"));
 
-//f you have only one parameter, you can skip the parentheses as well
+//If you have only one parameter, you can skip the parentheses as well
 helloNum = number => "Hello " + number;
 console.log(helloNum(10));

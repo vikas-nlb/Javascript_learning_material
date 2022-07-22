@@ -7,6 +7,6 @@
 var projects = ["Retail", "Whitelabel", "Sme", "Masspay", "Baas"];
 console.log("For loop");
 for (let i = 0; i < projects.length; i++) {
-  console.log(friends[i]);
+  console.log(projects[i]);
 }
 

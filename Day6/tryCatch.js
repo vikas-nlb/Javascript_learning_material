@@ -6,23 +6,23 @@
 
 //try catch helps developers handle edge cases better and it helps users understand the problem incase there is an run time error
 
-// try {
+try {
 
-//     console.log('Entering try')
+    console.log('Entering try')
 
-//     helloFunction()
+    helloFunction()
 
-//     console.log('Hello was called')
+    console.log('Hello was called')
 
-// } catch (err) {
+} catch (err) {
 
-//     console.log('Run time error : ' + err)
+    console.log('Run time error : ' + err)
 
-// } finally {
+} finally {
 
-//     console.log('This always runs')
+    console.log('This always runs')
 
-// }
+}
 
 //try block runs any code written inside it and keeps a watch for run time errors , when an error actually occurs rather that crashing the application it helps developers deal with it in a logical manner
 //Catch block helps try block handle the run time errors it caught 

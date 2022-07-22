@@ -20,7 +20,7 @@ function processRequest(data) {
     })
 }
 
-//Solving the promise in the old fashion way
+// //Solving the promise in the old fashion way
 // makeRequest('Nium').then((res) => {
 //     console.log('Response recieved ')
 //     return processRequest(res)
@@ -46,5 +46,5 @@ async function doWork() {
 doWork()
 
 // 'async' keyword should added in front of the function
-// This makes the program asynchronus
+// This makes the program asynchronous
 // 'await' keyword makes the code execute the function or code in parallel and the code will continue execution and come back once the function finishes execution
