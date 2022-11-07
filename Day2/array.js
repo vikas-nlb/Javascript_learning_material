@@ -31,11 +31,12 @@ console.log("Reverse function");
 var reverse = a.reverse();
 console.log(reverse);
 
+console.log("Pop function");
+var pop = a.pop();
+console.log(a);
+
 console.log("Push function");
 var push = a.push(10);
 console.log(a);
 
-console.log("Pop function");
-var pop = a.pop();
-console.log(a);
 

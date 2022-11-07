@@ -33,5 +33,5 @@ console.log("X is :" + typeof x);
 /* Null */
 let val = null;
 console.log(val + ":" + typeof val);
-    // Output : object
-    // Here typoOf will return 'object' , this is a javascript bug.
+// Output : object
+// Here typoOf will return 'object' , this is a javascript bug.
