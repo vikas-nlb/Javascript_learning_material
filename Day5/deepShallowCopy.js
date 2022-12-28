@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-console.log('Hello')
-=======
 //Normal Copy
 const a = {name:'Vikas'}
 const b = a // const 'b' will point to the same memory const 'a' is pointing to
@@ -83,4 +80,4 @@ const m = {
 const n = lodash.cloneDeep(m)
 console.log('Object with function and nesting',m)
 console.log('Copy of Object with function and nesting using lodash',n);
->>>>>>> 563f5f5429cbc776615634f2b75faaad70f0f42f
+
